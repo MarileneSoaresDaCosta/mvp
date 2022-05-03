@@ -1,0 +1,5 @@
+/* ============== Auxiliary scripts etc to manage the database  ============== */
+
+// load the schema in terminal
+psql lene -h 127.0.0.1 -d timeplanner -f schema.sql
+

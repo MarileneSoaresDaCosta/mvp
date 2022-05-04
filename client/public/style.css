@@ -1,8 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
   font-family:'Montserrat',sans-serif;
-  background-color: #f7f7f7;
-  color: #4a4b4d;
+  background-color: #faf5ef;
+  color: #272728;
 }
 
+
+.jumbotron {
+  padding: 50px;
+}
+
+.btn {
+  margin: 50px;
+  width: 200px;
+  height: 100px;;
+  /* background-color: rgb(10, 207, 207) ; */
+}
+
+.banner {
+  background-color: rgb(61, 196, 237);
+  border: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  h1 {
+  color: white;
+  font-weight: 100;
+  }
+
+.footer {
+  font: 0.75em;
+  font-weight: 100;
+}

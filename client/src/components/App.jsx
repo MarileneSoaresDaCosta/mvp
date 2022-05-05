@@ -9,43 +9,61 @@ const App = () => {
   return (
     <div>
       {/* banner */}
-      <div className="row banner">
-        <div className="col-6">
+      <div className="banner-grid">
+
+        <div className="title">
           <h1> timePlanner</h1>
         </div>
-        <div className="col-6">
-          <input className="form-control" type="search" placeholder="Search" aria-label="Search"></input>
-          <span className="login" id="login" onClick={() => setLogin(true)}>Login</span> | <span className="signup">Sign up</span>
+
+        <div className="search">
+          <input className="form-control login-corner" type="search" placeholder="Search" aria-label="Search"></input>
         </div>
+
+        <div className="leftCorner">
+          <span id="login" onClick={() => setLogin(true)}>Login</span> | <span>Sign up</span>
+        </div>
+
       </div>
       {/* main */}
-      { login === false &&
-      <div className="jumbotron jumbotron-fluid text-center">
-        <div className="row">
-          <h4 className="display-5"> CHART YOUR PLANS</h4>
-        </div>
-        <div className="row">
-          <div className="col"> </div>
-          <div className="col">
-            <button className="btn btn-info btn-md" onClick={() => setLogin(true)}>Login</button>
+      {
+        login === false &&
+        <div className="main jumbotron jumbotron-fluid text-center">
+          <div className="row">
+            <h4 className="display-5"> CHART YOUR PLANS</h4>
           </div>
-          <div className="col"> </div>
-        </div>
-        <div className="row">
-          <div className="col"> </div>
-          <div className="col">
-            {/* <button className="btn btn-info btn-md">New chart</button> */}
+          <div className="row">
+            <div className="col"> </div>
+            <div className="col">
+              <button className="btn btn-info btn-md" onClick={() => setLogin(true)}>Login</button>
+            </div>
+            <div className="col"> </div>
           </div>
-          <div className="col"> </div>
+          <div className="row">
+            <div className="col"> </div>
+            <div className="col">
+              {/* <button className="btn btn-info btn-md">New chart</button> */}
+            </div>
+            <div className="col"> </div>
+          </div>
         </div>
-      </div>
       }
-      {login === true &&
-     <div className="jumbotron jumbotron-fluid text-center"> <Login setLogin={setLogin} /> </div>
-     }
+      {
+        login === true &&
+        <div className="jumbotron jumbotron-fluid text-center"> <Login setLogin={setLogin} /> </div>
+      }
 
-      <div className="row text-center">
-        <p className="footer">mvp</p>
+      <div className="row r footer-grid">
+        <div className="left-foot">
+        <img className="mvplogo" src="./mvplogo.png" alt="the logo for the mvp project"></img>
+        </div>
+        <div className="right-foot">
+
+          <p className="footer-text">timePlanner is a personal project created for the Hack Reactor Software Engineering Immersive</p>
+        </div>
+        <div className="signature">
+          msdacosta
+        </div>
+
       </div>
     </div >
   )

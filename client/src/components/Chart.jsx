@@ -18,7 +18,7 @@ const Chart = ({ newChartId, chart_name, chart_start_date, chart_end_date }) => 
       <div className="end">{chart_end_date}</div>
     </div>
 
-    <div> tasks list</div>
+    <div> </div>
 
     <div>
       <AddTask

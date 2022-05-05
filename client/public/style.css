@@ -3,12 +3,13 @@
 body {
   font-family:'Montserrat',sans-serif;
   color: #373833;
-  background-color: #F7F7F7;
+  background-color: white;
 }
 
 
 .jumbotron {
   padding: 50px;
+  min-height: 600px;
 }
 
 .btn {
@@ -18,23 +19,88 @@ body {
   color:white;
 }
 
-.banner {
+.banner-grid {
   background-color:#0dcaf0;
   border: none;
   margin: 0;
   padding: 0;
   height: 50px;
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "title search leftCorner";
+  grid-template-columns: 8fr 5fr 4fr;
+  vertical-align: bottom;
   }
+
+.title {
+  grid-area: title;
+  padding-left: 20px;
+
+}
+
+.search {
+  grid-area: search;
+}
+
+.leftCorner {
+  grid-area: leftCorner;
+  color: white;
+  padding-top:10px;
+}
+/*
+
+.login {
+  margin-left: 20px;
+  color: white;
+} */
+
+.login:hover {
+  background-color: aqua;
+  color: grey;
+}
 
   h1 {
   color: white;
   font-weight: 100;
   }
 
-.footer {
-  font: 0.75em;
-  font-weight: 100;
+
+
+.footer-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "left-foot right-foot signature";
+  grid-template-columns: 3fr 9fr 3fr;
+  background-color: white;
+  border-top: solid #0dcaf0;
 }
+
+.left-foot {
+  grid-area: left-foot;
+}
+
+.mvplogo {
+  height:100px;
+  width: auto;
+  padding-left: 20px;
+}
+.right-foot {
+  grid-area: right-foot;
+}
+
+.footer-text {
+  font-size: 1em;
+  font-weight: bold;
+  color: #0dcaf0;
+  text-align: left;
+}
+
+.signature {
+  font-size: 1em;
+  color: #0dcaf0;
+  border-left: solid  #0dcaf0;
+}
+
 
 .form-control {
   max-height: 30px;
@@ -43,15 +109,8 @@ body {
   display: inline;
 }
 
-.login {
-  margin-left: 20px;
-  color: white;
-}
 
-.login:hover {
-  background-color: aqua;
-  color: grey;
-}
+
 
 .chartListItem {
   font-size: 2em;
@@ -69,6 +128,7 @@ body {
   gap: 10px;
   grid-template-areas: "empty start projectName end";
   grid-template-columns: 3fr 1fr 9fr 1fr;
+  border-bottom:#0dcaf0;
 }
 
 .empty {
@@ -94,18 +154,26 @@ body {
   display: grid;
   gap: 10px;
   grid-template-areas: "task bar";
-  grid-template-columns: 4fr 10fr;
+  grid-template-columns: 8fr 12fr;
+  text-align: left;
 }
 
 .task {
   grid-area: task;
+  text-align: left;
 }
 
 .bar {
   grid-area: bar;
+  text-align: left;
 }
 
 .btn-task {
   width: 20px;
   height: 30px;
+  margin-left: 10px;
+}
+
+.bar input {
+  margin-left: 20px;
 }

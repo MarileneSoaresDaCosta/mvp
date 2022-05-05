@@ -51,16 +51,16 @@ const AddTask = ({ newChartId, chart_start_date, chart_end_date }) => {
 
   return (
     <div>
-      <form id="AddTaskForm" onSubmit={submitNewTask}>
+      <form className="task-grid" id="AddTaskForm" onSubmit={submitNewTask}>
         <div className="task">
-          <input name="task_description" type="text" className="form-control" placeholder="task"
+          <input name="task_description" type="text"  placeholder="task"
             value={task_description} onChange={changeHandler}></input>
         </div>
 
         <div className="bar">
-          <input name="task_start_date" type="date" className="form-control" placeholder="start date" value={task_start_date} onChange={changeHandler}></input>
+          <input name="task_start_date" type="date"  placeholder="start date" value={task_start_date} onChange={changeHandler}></input>
 
-          <input name="task_end_date" type="date" className="form-control" placeholder="deadline" value={task_end_date} onChange={changeHandler}></input>
+          <input name="task_end_date" type="date"  placeholder="deadline" value={task_end_date} onChange={changeHandler}></input>
 
           <button type="submit" name="submit" className="btn-task">></button>
         </div>

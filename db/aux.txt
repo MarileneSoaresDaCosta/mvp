@@ -3,3 +3,20 @@
 // load the schema in terminal
 psql lene -h 127.0.0.1 -d timeplanner -f schema.sql
 
+// insert some dummy data
+
+COPY users(user_id, name, password, email)
+FROM '/Users/lene/Dropbox/HackReactor/mvp/db/users.csv'
+DELIMITER ','
+CSV HEADER;
+
+
+COPY charts(chart_id, chart_start_date, chart_end_date, users_user_id, chart_name)
+FROM '/Users/lene/Dropbox/HackReactor/mvp/db/charts.csv'
+DELIMITER ','
+CSV HEADER;
+
+COPY tasks(task_id, task_start_date, task_end_date, charts_chart_id, task_description)
+FROM '/Users/lene/Dropbox/HackReactor/mvp/db/tasks.csv'
+DELIMITER ','
+CSV HEADER;

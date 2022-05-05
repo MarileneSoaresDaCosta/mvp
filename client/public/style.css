@@ -2,8 +2,8 @@
 
 body {
   font-family:'Montserrat',sans-serif;
-  background-color: #faf5ef;
-  color: #272728;
+  color: #373833;
+  background-color: #F7F7F7;
 }
 
 
@@ -15,14 +15,15 @@ body {
   margin: 50px;
   width: 200px;
   height: 100px;;
-  /* background-color: rgb(10, 207, 207) ; */
+  color:white;
 }
 
 .banner {
-  background-color: rgb(61, 196, 237);
+  background-color:#0dcaf0;
   border: none;
   margin: 0;
   padding: 0;
+  height: 50px;
   }
 
   h1 {
@@ -33,4 +34,78 @@ body {
 .footer {
   font: 0.75em;
   font-weight: 100;
+}
+
+.form-control {
+  max-height: 30px;
+  margin-top: 10px;
+  max-width: 300px;
+  display: inline;
+}
+
+.login {
+  margin-left: 20px;
+  color: white;
+}
+
+.login:hover {
+  background-color: aqua;
+  color: grey;
+}
+
+.chartListItem {
+  font-size: 2em;
+  margin: 10px;
+  border-bottom: solid 2px grey;
+}
+
+.chartListItem:hover {
+  background-color: rgb(151, 245, 245);
+  color: grey;
+}
+
+.top-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "empty start projectName end";
+  grid-template-columns: 3fr 1fr 9fr 1fr;
+}
+
+.empty {
+  grid-area: empty;
+}
+
+.start {
+  grid-area: start;
+  font-size: 0.75em;;
+}
+
+.end {
+  grid-area: end;
+  font-size: 0.75em;;
+}
+
+.projectName {
+  grid-area: projectName;
+  font-size:1.2em;
+}
+
+.task-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "task bar";
+  grid-template-columns: 4fr 10fr;
+}
+
+.task {
+  grid-area: task;
+}
+
+.bar {
+  grid-area: bar;
+}
+
+.btn-task {
+  width: 20px;
+  height: 30px;
 }
